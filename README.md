@@ -58,6 +58,9 @@ When the Qt-based GUI appears after running `./QtCrypt`:
 2. **Enter a Key:** Provide the encryption key.
 3. **Choose an Operation:** Click “Encrypt” or “Decrypt.”
 4. **View Status:** Monitor progress and see log messages in the interface.
+
+'''
+
 ## Development Guidelines
 - **Code Quality:** Adhere to modern C++ best practices and maintain clear, well-documented code.
 - **Modular Design:** Ensure each module is self-contained with clearly defined interfaces.
