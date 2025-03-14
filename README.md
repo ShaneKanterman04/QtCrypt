@@ -59,7 +59,7 @@ When the Qt-based GUI appears after running `./QtCrypt`:
 3. **Choose an Operation:** Click “Encrypt” or “Decrypt.”
 4. **View Status:** Monitor progress and see log messages in the interface.
 
-'''
+```
 
 ## Development Guidelines
 - **Code Quality:** Adhere to modern C++ best practices and maintain clear, well-documented code.
