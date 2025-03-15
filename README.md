@@ -32,28 +32,28 @@ QtCrypt is developed using modern C++ standards and leverages the Qt framework f
 - [CMake](https://cmake.org/) for build configuration
 - [Qt 5 or later](https://www.qt.io/) for the graphical user interface
 
-### Build & Run Instructions
+# Build & Run Instructions
 
-# Step 1: Clone the repository
+### Step 1: Clone the repository
 ```bash
 git clone https://github.com/yourusername/QtCrypt.git
 cd QtCrypt
 ```
 
-# Step 2: Create a build directory and navigate into it
+### Step 2: Create a build directory and navigate into it
 ```bash
 mkdir build
 cd build
 ```
 
-# Step 3: Configure the project with CMake
+### Step 3: Configure the project with CMake
 ```bash
 # (If CMake doesn't automatically detect your Qt installation,
 #  set CMAKE_PREFIX_PATH to your Qt directory)
 cmake ..
 ```
 
-# Step 4: Build the project
+### Step 4: Build the project
 ```bash
 cmake --build .
 ```
