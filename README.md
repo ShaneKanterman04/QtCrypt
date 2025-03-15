@@ -58,7 +58,7 @@ cmake ..
 cmake --build .
 ```
 
-# Step 5: Run the application (still inside the build directory)
+### Step 5: Run the application (still inside the build directory)
 ```bash
 ./QtCrypt
 ```
