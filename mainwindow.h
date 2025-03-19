@@ -28,6 +28,7 @@ private:
     Ui::MainWindow *ui;
     QFile file; // Move file variable to the header
     void loadFileContents(const QString &fileName);
+    void closeFile(const QString &fileName);
 
 };
 

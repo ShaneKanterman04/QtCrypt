@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -41,7 +42,9 @@ public:
     QSpacerItem *verticalSpacer;
     QVBoxLayout *verticalLayout;
     QLabel *lblFileName;
+    QCheckBox *btnKeepSource;
     QTextBrowser *textEdit;
+    QSpacerItem *horizontalSpacer;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -50,6 +53,13 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->resize(800, 600);
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(800, 600));
+        MainWindow->setMaximumSize(QSize(800, 600));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         horizontalLayoutWidget = new QWidget(centralwidget);
@@ -106,6 +116,14 @@ public:
 
         verticalLayout->addWidget(lblFileName);
 
+        btnKeepSource = new QCheckBox(horizontalLayoutWidget);
+        btnKeepSource->setObjectName("btnKeepSource");
+        QFont font;
+        font.setPointSize(8);
+        btnKeepSource->setFont(font);
+
+        verticalLayout->addWidget(btnKeepSource);
+
         textEdit = new QTextBrowser(horizontalLayoutWidget);
         textEdit->setObjectName("textEdit");
 
@@ -113,6 +131,10 @@ public:
 
 
         horizontalLayout->addLayout(verticalLayout);
+
+        horizontalSpacer = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -130,7 +152,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "QtCrypt", nullptr));
         btnSelect->setText(QCoreApplication::translate("MainWindow", "Select File", nullptr));
         btnEncrypt->setText(QCoreApplication::translate("MainWindow", "Encrypt", nullptr));
         btnDecrypt->setText(QCoreApplication::translate("MainWindow", "Decrypt", nullptr));
@@ -138,7 +160,8 @@ public:
         txtKey->setToolTip(QString());
 #endif // QT_CONFIG(tooltip)
         txtKey->setPlaceholderText(QCoreApplication::translate("MainWindow", "Type key (password) here", nullptr));
-        lblFileName->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        lblFileName->setText(QCoreApplication::translate("MainWindow", "Please select a file...", nullptr));
+        btnKeepSource->setText(QCoreApplication::translate("MainWindow", "Keep file open?", nullptr));
     } // retranslateUi
 
 };

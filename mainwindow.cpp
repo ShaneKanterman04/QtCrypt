@@ -67,6 +67,14 @@ void MainWindow::on_btnEncrypt_pressed()
 
 void MainWindow::encryptFile(const QString &fileName, const QString &password)
 {
+    //  Check for key
+    if (ui->txtKey->text() == "")
+    {
+        QMessageBox::warning(this, "Error", "No Key!");
+        return;
+    }
+
+    //  Check if file exists
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
         QMessageBox::warning(this, "Error", "Failed to open file for reading.");
@@ -94,7 +102,14 @@ void MainWindow::encryptFile(const QString &fileName, const QString &password)
     encryptedFile.write(fileData);
     encryptedFile.close();
 
-    MainWindow::loadFileContents(fileName);
+    if(ui->btnKeepSource->checkState())
+    {
+        MainWindow::loadFileContents(fileName);
+    }else {
+        MainWindow::closeFile(fileName);
+    }
+
+
 
     QMessageBox::information(this, "Success", "File encrypted successfully!");
 }
@@ -135,4 +150,11 @@ void MainWindow::decryptFile(const QString &fileName, const QString &password)
 void MainWindow::on_btnDecrypt_pressed()
 {
     MainWindow::decryptFile(file.fileName(), ui->txtKey->text());
+}
+
+void MainWindow::closeFile(const QString &fileName)
+{
+    ui->textEdit->clear();
+    ui->lblFileName->setText("Please select a file...");
+    file.close();
 }
