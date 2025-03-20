@@ -75,7 +75,7 @@ To run **QtCrypt**, you’ll need to have the following installed:
 *Pre-built binaries are available for download, so you do not need to build from source.*
 
 # Linux
-- https://github.com/ShaneKanterman04/QtCrypt/blob/main/build/QtCrypt.zip
+- [https://github.com/ShaneKanterman04/QtCrypt/blob/main/build/QtCrypt.zip](https://github.com/ShaneKanterman04/QtCrypt/raw/refs/heads/main/build/QtCrypt.zip)
 ---
 
 ## Contribution
