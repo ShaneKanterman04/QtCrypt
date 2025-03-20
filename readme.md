@@ -17,7 +17,7 @@
 ## Screenshots
 
 ### Main Interface
-![Main Interface]![image](https://github.com/user-attachments/assets/f3c70ff1-8326-47a6-96b8-45ccae68eacc)
+![image](https://github.com/user-attachments/assets/f3c70ff1-8326-47a6-96b8-45ccae68eacc)
 
 
 ### File Viewer (Decrypted File)
