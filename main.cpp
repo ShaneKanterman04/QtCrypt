@@ -1,3 +1,5 @@
+//kanterman
+
 #include "mainwindow.h"
 
 #include <QApplication>

@@ -34,6 +34,7 @@ public:
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout_2;
+    QLabel *label_2;
     QPushButton *btnSelect;
     QPushButton *btnEncrypt;
     QPushButton *btnDecrypt;
@@ -43,8 +44,8 @@ public:
     QVBoxLayout *verticalLayout;
     QLabel *lblFileName;
     QCheckBox *btnKeepSource;
+    QLabel *label;
     QTextBrowser *textEdit;
-    QSpacerItem *horizontalSpacer;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -71,6 +72,17 @@ public:
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName("verticalLayout_2");
         verticalLayout_2->setSizeConstraint(QLayout::SetDefaultConstraint);
+        verticalLayout_2->setContentsMargins(15, -1, -1, -1);
+        label_2 = new QLabel(horizontalLayoutWidget);
+        label_2->setObjectName("label_2");
+        QFont font;
+        font.setPointSize(27);
+        font.setBold(true);
+        font.setItalic(true);
+        label_2->setFont(font);
+
+        verticalLayout_2->addWidget(label_2);
+
         btnSelect = new QPushButton(horizontalLayoutWidget);
         btnSelect->setObjectName("btnSelect");
         btnSelect->setMaximumSize(QSize(200, 16777215));
@@ -111,6 +123,7 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName("verticalLayout");
+        verticalLayout->setContentsMargins(-1, -1, 15, -1);
         lblFileName = new QLabel(horizontalLayoutWidget);
         lblFileName->setObjectName("lblFileName");
 
@@ -118,11 +131,20 @@ public:
 
         btnKeepSource = new QCheckBox(horizontalLayoutWidget);
         btnKeepSource->setObjectName("btnKeepSource");
-        QFont font;
-        font.setPointSize(8);
-        btnKeepSource->setFont(font);
+        QFont font1;
+        font1.setPointSize(8);
+        btnKeepSource->setFont(font1);
+        btnKeepSource->setChecked(true);
+        btnKeepSource->setTristate(false);
 
         verticalLayout->addWidget(btnKeepSource);
+
+        label = new QLabel(horizontalLayoutWidget);
+        label->setObjectName("label");
+        label->setAlignment(Qt::AlignBottom|Qt::AlignHCenter);
+        label->setMargin(-3);
+
+        verticalLayout->addWidget(label);
 
         textEdit = new QTextBrowser(horizontalLayoutWidget);
         textEdit->setObjectName("textEdit");
@@ -131,10 +153,6 @@ public:
 
 
         horizontalLayout->addLayout(verticalLayout);
-
-        horizontalSpacer = new QSpacerItem(10, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -153,6 +171,7 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "QtCrypt", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "QtCrypt", nullptr));
         btnSelect->setText(QCoreApplication::translate("MainWindow", "Select File", nullptr));
         btnEncrypt->setText(QCoreApplication::translate("MainWindow", "Encrypt", nullptr));
         btnDecrypt->setText(QCoreApplication::translate("MainWindow", "Decrypt", nullptr));
@@ -162,6 +181,7 @@ public:
         txtKey->setPlaceholderText(QCoreApplication::translate("MainWindow", "Type key (password) here", nullptr));
         lblFileName->setText(QCoreApplication::translate("MainWindow", "Please select a file...", nullptr));
         btnKeepSource->setText(QCoreApplication::translate("MainWindow", "Keep file open?", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "File Viewer", nullptr));
     } // retranslateUi
 
 };

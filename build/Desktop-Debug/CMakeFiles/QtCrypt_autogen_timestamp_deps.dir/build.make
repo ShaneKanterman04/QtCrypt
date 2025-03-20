@@ -66,10 +66,10 @@ include CMakeFiles/QtCrypt_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/QtCrypt_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/QtCrypt_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
-CMakeFiles/QtCrypt_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
 CMakeFiles/QtCrypt_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 CMakeFiles/QtCrypt_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
+CMakeFiles/QtCrypt_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
+CMakeFiles/QtCrypt_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
 
 QtCrypt_autogen_timestamp_deps: CMakeFiles/QtCrypt_autogen_timestamp_deps
 QtCrypt_autogen_timestamp_deps: CMakeFiles/QtCrypt_autogen_timestamp_deps.dir/build.make
