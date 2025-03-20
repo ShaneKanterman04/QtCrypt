@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+b2a4a17a85dfa4ab797e99e76c33dc33 CMakeFiles/QtCrypt_autogen
+b2a4a17a85dfa4ab797e99e76c33dc33 CMakeFiles/QtCrypt_autogen_timestamp_deps
+839ddcb4d2c9ceacb6865a7c5245fe9e QtCrypt_autogen/timestamp
