@@ -17,7 +17,7 @@
 ## Screenshots
 
 ### Main Interface
-![Main Interface](https://paste.pics/ed298d7be2cff5cbfd84444fa95357d8)
+![Main Interface]([https://paste.pics/ed298d7be2cff5cbfd84444fa95357d8](https://i2.paste.pics/ed298d7be2cff5cbfd84444fa95357d8.png?rand=o2h4HgQwId))
 
 ### File Viewer (Decrypted File)
 ![File Viewer](https://your-link-to-screenshot2.png)
